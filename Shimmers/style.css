@@ -1,0 +1,99 @@
+.shimmers {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0.5rem;
+  gap: 1rem;
+}
+
+.shimmerCard {
+  width: 215px;
+  height: 300px;
+  background-color: #f3f3f3;
+  border-radius: 0.4rem;
+  padding: 1rem 0.5rem;
+}
+.shimmerimg {
+  border-radius: 0.4rem;
+  width: 100%;
+  height: 200px;
+  background-color: #dfdfdf;
+}
+
+.shimmerSpan {
+  width: 100%;
+  background-color: #dfdfdf;
+  margin-top: 0.5rem;
+  height: 0.7rem;
+  border-radius: 0.2rem;
+}
+
+.shimmerheading {
+  border-radius: 0.2rem;
+  width: 100%;
+  background-color: #dfdfdf;
+  margin-top: 0.5rem;
+  height: 1rem;
+}
+
+.carddetailsshimmers {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.detailImageshimmer {
+  width: 50%;
+  height: 60vh;
+  background-color: #dfdfdf;
+  border-radius: 0.4rem;
+}
+
+.detailTxtshimmer {
+  width: 100%;
+}
+.detailshimmersmallspanner {
+  width: 200px;
+  height: 1.2rem;
+  margin-top: 0.8rem;
+  background-color: #dfdfdf;
+  border-radius: 0.2rem;
+}
+
+.detailshimmerheading {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.4rem;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #dfdfdf;
+}
+
+.detailshimmerpara {
+  width: 90%;
+  height: 1rem;
+  border-radius: 0.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #dfdfdf;
+}
+
+.detailshimmerspanner {
+  width: 25%;
+  height: 1.4rem;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  background-color: #dfdfdf;
+}
+
+.detailshimmerbtn {
+  width: 200px;
+  height: 5vh;
+  margin-top: 1.5rem;
+  border-radius: 0.2rem;
+  background-color: #dfdfdf;
+  border: none;
+  outline: none;
+}
