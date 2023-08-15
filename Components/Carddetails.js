@@ -3,28 +3,19 @@ import { useParams } from "react-router-dom"
 import { BsCart2 } from "react-icons/bs"
 import Leftsidebar from "../src/Leftsidebar"
 import CardDetailsShimmer from "../Shimmers/CardDetailsShimmer"
+import useCarddetails from "../Utils/useCarddetails"
 const Carddetails = () => {
-  const [details, setDetails] = useState([])
   const { id } = useParams()
-  useEffect(() => {
-    getproductDetails()
-  }, [])
-
-  const getproductDetails = async () => {
-    const res = await fetch("https://fakestoreapi.com/products/" + id)
-    const data = await res.json()
-    setDetails(data)
-    console.log(data)
-  }
+  const details = useCarddetails(id)
 
   return (
     <div className="bodyLayout">
       <Leftsidebar />
       <div className="detail commoncontainer cardContainer background">
-        {details.length === 0 ? (
+        {!details ? (
           <CardDetailsShimmer />
         ) : (
-          <div className="details">
+          <div className="details" key={details?.id}>
             <div className="dImg">
               <img
                 src={details?.image}

@@ -210,14 +210,9 @@ li {
 }
 
 .detail {
-  /* display: flex;
-  gap: 2.5rem;
-  flex-wrap: unset;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem; */
   width: 100%;
-  height: 100%;
+  height: 84vh;
+  margin-bottom: 1.35rem;
 }
 
 .details {

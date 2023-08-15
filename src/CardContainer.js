@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Card from "../Components/Card"
 import { Link } from "react-router-dom"
 import HomeShimmer from "../Shimmers/HomeShimmer"
+import useProductList from "../Utils/useProductList"
 const CardContainer = () => {
-  const [list, setList] = useState([])
-
-  useEffect(() => {
-    setTimeout(() => {
-      ProductList()
-    }, 1000)
-  }, [])
-
-  const ProductList = async () => {
-    const res = await fetch("https://fakestoreapi.com/products")
-    const data = await res.json()
-    setList(data)
-  }
+  const list = useProductList()
 
   return (
     <div className="commoncontainer cardContainer background">
