@@ -3,7 +3,9 @@ import { BsShop } from "react-icons/bs"
 import { BiSearch } from "react-icons/bi"
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
 import { Link } from "react-router-dom"
+import useOnlineStatus from "../Utils/usOnlineStatus"
 const Header = () => {
+  const isOnline = useOnlineStatus()
   return (
     <div className="headerLayout background">
       <div className="logo">
@@ -22,6 +24,7 @@ const Header = () => {
         />
       </div>
       <div className="navlists">
+        <span>{isOnline ? "🟢" : "🔴"}</span>
         <span>
           <Link className="navSpan" to="/cart">
             <AiOutlineShoppingCart size={20} /> Cart

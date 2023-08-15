@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { useParams } from "react-router-dom"
 import { BsCart2 } from "react-icons/bs"
 import Leftsidebar from "../src/Leftsidebar"
