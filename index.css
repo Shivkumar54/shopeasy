@@ -221,6 +221,8 @@ li {
 }
 
 .details {
+  width: 100%;
+  height: 100%;
   display: flex;
   gap: 2.5rem;
   flex-wrap: unset;
@@ -293,6 +295,139 @@ li {
 .notfoundImage {
   width: 350px;
   height: 350px;
+}
+
+.loginLayout {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 500px;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.namelayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 2rem;
+  width: 100%;
+  height: 100%;
+}
+.vericalline {
+  border-left: 1px solid rgb(158, 158, 158);
+  height: 80%;
+}
+.formImg {
+  width: 100%;
+  height: 100%;
+}
+.formlayout {
+  width: 100%;
+  padding: 1rem 5rem 1rem 3rem;
+}
+.formheading {
+  font-weight: 600;
+  margin-bottom: 0rem;
+  font-size: 1.7rem;
+}
+.formPara {
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+.formInput {
+  width: 100%;
+  margin-bottom: 0.2rem;
+  padding: 0.5rem 1rem;
+}
+
+.Validator {
+  color: red;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin: 0rem;
+  height: 1.4rem;
+}
+
+.passwords {
+  position: relative;
+}
+.passicons {
+  position: absolute;
+  display: inline;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.formsmallheading {
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+.fornbtn {
+  padding: 0.4rem 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+hr {
+  color: #c5c5c5;
+}
+
+.iconss {
+  margin-top: 1rem;
+  text-align: center;
+}
+.icons {
+  margin: 0 0.5rem;
+}
+
+.cartLayout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  height: 85vh;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1.5rem;
+}
+.cartTitle {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.emptycart {
+  width: 400px;
+  margin-bottom: 0.5rem;
+  opacity: 50%;
+}
+
+.noitemTxt {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 /* cardContainer */
