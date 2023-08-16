@@ -1,13 +1,12 @@
 import React from "react"
-import HomeShimmer from "../Shimmers/HomeShimmer"
 
 const Card = ({ product }) => {
   return (
     <div>
       <div className="card">
         <div className="imager">
-          <div className="category">{product.category}</div>
           <img src={product.image} alt="tshirt" className="cardImage" />
+          {/* <div className="category">{product.category}</div> */}
         </div>
         <h5 className="cardTitle">{product.title}</h5>
         <span className="carddetails">
@@ -22,27 +21,15 @@ const Card = ({ product }) => {
   )
 }
 
-export default Card
-
-{
-  /* <div className="card">
-        <div className="imager">
-          <div className="category">Men Clothing</div>
-          <img
-            src="https://fullyfilmy.in/cdn/shop/products/New-Mockups---no-hanger---TShirt-Yellow.jpg?v=1639657077"
-            alt="tshirt"
-            className="cardImage"
-          />
-        </div>
-        <h5 className="cardTitle">
-          Lorem ipsum dolor sit amet dolor sit amet.
-        </h5>
-        <span className="carddetails">
-          Rating - <strong>4.0 ⭐</strong>
-        </span>
-        <br />
-        <span className="carddetails">
-          Price - <strong>Rs 390/-</strong>
-        </span>
-      </div> */
+export const withBestSellerLabel = (Card) => {
+  return (props) => {
+    return (
+      <>
+        <label className="bestsellertxt">Best Seller</label>
+        <Card {...props} />
+      </>
+    )
+  }
 }
+
+export default Card
