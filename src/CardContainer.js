@@ -13,14 +13,13 @@ const CardContainer = () => {
         <HomeShimmer />
       ) : (
         list?.map((item) => {
-          console.log(item.rating.count)
           return (
             <Link
               className="commonlinks"
               key={item.id}
               to={"/product/" + item.id}
             >
-              {item.rating.count >= 300 ? (
+              {item.rating.rate >= 4 ? (
                 <Bestseller product={item} />
               ) : (
                 <Card product={item} />
