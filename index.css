@@ -248,7 +248,7 @@ li {
 }
 .dCategory {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.8rem;
   margin-bottom: 5rem;
   color: rgb(68, 68, 68);
@@ -262,6 +262,8 @@ li {
 
 .detaildescription {
   margin-bottom: 0rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
 }
 
 .detailSpanner {
@@ -274,9 +276,15 @@ li {
   margin-top: 1rem;
   display: inline-flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
   gap: 0.5rem;
-  padding: 0.4rem 1.4rem;
+  padding: 0.7rem 1.4rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .errorpageLayout {

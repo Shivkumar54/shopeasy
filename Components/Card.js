@@ -14,7 +14,7 @@ const Card = ({ product }) => {
         </span>
         <br />
         <span className="carddetails">
-          Price - <strong>Rs {(product.price * 10).toFixed(2)}/-</strong>
+          Price - <strong>₹ {(product.price * 10).toFixed(2)}/-</strong>
         </span>
       </div>
     </div>

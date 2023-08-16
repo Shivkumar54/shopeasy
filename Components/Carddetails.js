@@ -26,19 +26,21 @@ const Carddetails = () => {
             <div className="dText">
               <span className="dCategory">{details?.category}</span>
               <h1 className="detailTitle">{details?.title}</h1>
-              <p className="detaildescription">{details?.description}</p>
+              <p className="detaildescription">
+                {(details?.description).toLowerCase()}.
+              </p>
               <br />
               <span className="detailSpanner">
                 Rating - <strong>{details?.rating?.rate}⭐</strong>
               </span>
               <br />
               <span className="detailSpanner">
-                Price - <strong>{(details?.price * 10).toFixed(2)}</strong>
+                Price - <strong>₹{(details?.price * 10).toFixed(2)}</strong>
               </span>
               <br />
               <button className="addtocart">
                 {" "}
-                <BsCart2 size={25} /> Add to cart
+                <BsCart2 size={20} /> Add to Cart
               </button>
             </div>
           </div>
