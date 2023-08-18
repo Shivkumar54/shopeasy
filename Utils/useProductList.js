@@ -4,9 +4,7 @@ const useProductList = () => {
   const [list, setList] = useState([])
 
   useEffect(() => {
-    setTimeout(() => {
-      ProductList()
-    }, 1000)
+    ProductList()
   }, [])
 
   const ProductList = async () => {

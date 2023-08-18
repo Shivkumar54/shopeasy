@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { BsShop } from "react-icons/bs"
 import { BiSearch } from "react-icons/bi"
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
@@ -6,6 +6,13 @@ import { Link } from "react-router-dom"
 import useOnlineStatus from "../Utils/usOnlineStatus"
 const Header = () => {
   const isOnline = useOnlineStatus()
+  const [usrInput, setUsrInput] = useState("")
+
+  const userEnteredValue = (e) => {
+    const userVal = e.target.value
+    setUsrInput(userVal)
+  }
+
   return (
     <div className="headerLayout background">
       <div className="logo">
@@ -21,6 +28,8 @@ const Header = () => {
           className="search"
           type="text"
           placeholder="Search Products ...."
+          value={usrInput}
+          onChange={userEnteredValue}
         />
       </div>
       <div className="navlists">

@@ -95,12 +95,13 @@ body {
 }
 
 .filterMain {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.4rem;
+  text-decoration: underline;
 }
 .filterLine {
   margin-top: 10px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 .filterName {
   font-weight: 600;
@@ -109,7 +110,7 @@ body {
 
 ul {
   list-style-type: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 li {
   margin-bottom: 0.7rem;
@@ -123,13 +124,14 @@ li {
 /* leftsidebar */
 .commonfilterer {
   padding: 1.35rem 2rem;
+  height: 432px;
   border-radius: 0.5rem;
 }
 .commonlinks {
   text-decoration-line: none;
 }
 .usersettings {
-  height: 14.8vh;
+  height: 15vh;
 }
 
 .commonlists {
@@ -143,16 +145,16 @@ li {
   margin-right: 1.35rem;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: start;
-  gap: 1rem;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 2.5rem;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
 
 .card {
-  width: 215px;
-  height: 300px;
+  width: 200px;
+  height: 320px;
   padding: 0.5rem;
   transition: 0.4s ease-in-out;
   border-radius: 0.4rem;
@@ -169,23 +171,18 @@ li {
   position: relative;
 }
 
-/* .category {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: #f6f6f6;
-  padding: 5px 10px;
-  z-index: 1;
-  font-size: 0.9rem;
-  text-transform: capitalize;
-  text-decoration: none;
+.category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
   color: black;
-} */
+}
 
 .bestsellertxt {
   background-color: #181818;
   padding: 5px 10px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: capitalize;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -195,6 +192,7 @@ li {
   width: 100%;
   height: 30vh;
   object-fit: contain;
+  padding: 0.6rem 1.2rem;
   margin-bottom: 0.6rem;
   cursor: pointer;
 }
@@ -280,10 +278,10 @@ li {
   font-weight: 600;
   gap: 0.5rem;
   padding: 0.7rem 1.4rem;
-  background-color: blue;
-  color: white;
+  background-color: rgb(202, 202, 255);
+  color: rgb(0, 0, 0);
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -480,4 +478,24 @@ hr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(192, 192, 192);
+}
+
+.filterTitlers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offersContents {
+  margin-top: 1.3rem;
+}
+.offertitle {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.offerdesc {
+  font-size: 0.8rem;
+  font-weight: 400;
 }

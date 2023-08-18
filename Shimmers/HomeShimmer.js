@@ -6,8 +6,8 @@ const HomeShimmer = () => {
     <div>
       {[...Array(10)].map((_, i) => {
         return (
-          <div className="shimmers">
-            <div key={i + 1} className="shimmerCard">
+          <div key={i + 1} className="shimmers">
+            <div className="shimmerCard">
               <div className="shimmerimg"></div>
               <h4 className="shimmerSpan"></h4>
               <h4 className="shimmerheading"></h4>

@@ -2,11 +2,11 @@ import React from "react"
 
 const Card = ({ product }) => {
   return (
-    <div>
+    <div className="cardd">
       <div className="card">
         <div className="imager">
           <img src={product.image} alt="tshirt" className="cardImage" />
-          {/* <div className="category">{product.category}</div> */}
+          <div className="category">{product.category}</div>
         </div>
         <h5 className="cardTitle">{product.title}</h5>
         <span className="carddetails">

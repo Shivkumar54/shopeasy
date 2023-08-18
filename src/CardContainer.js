@@ -2,9 +2,8 @@ import React from "react"
 import Card, { withBestSellerLabel } from "../Components/Card"
 import { Link } from "react-router-dom"
 import HomeShimmer from "../Shimmers/HomeShimmer"
-import useProductList from "../Utils/useProductList"
-const CardContainer = () => {
-  const list = useProductList()
+
+const CardContainer = ({ list }) => {
   const Bestseller = withBestSellerLabel(Card)
 
   return (
@@ -24,7 +23,6 @@ const CardContainer = () => {
               ) : (
                 <Card product={item} />
               )}
-              {/* <Card product={item} /> */}
             </Link>
           )
         })
