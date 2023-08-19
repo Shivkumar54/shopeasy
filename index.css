@@ -489,13 +489,27 @@ hr {
 .offersContents {
   margin-top: 1.3rem;
 }
+
+.offersTitler {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+}
+
 .offertitle {
   font-weight: 600;
   font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.3rem;
 }
 .offerdesc {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
+  margin-top: 0.1rem;
+  margin-bottom: 0.3rem;
+}
+.valid {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }

@@ -4,12 +4,12 @@ import UserSettings from "../Components/UserSettings"
 import FilterItems from "../Components/FilterItems"
 import OffersPage from "../Components/OffersPage"
 
-const Leftsidebar = ({ filter }) => {
+const Leftsidebar = ({ filter, lToH, hToL }) => {
   const location = useLocation()
 
   const renderSIdeBarComponent = () => {
     if (location.pathname === "/") {
-      return <FilterItems filter={filter} />
+      return <FilterItems filter={filter} lToH={lToH} hToL={hToL} />
     } else if (location.pathname.startsWith("/product")) {
       return <OffersPage />
     }

@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { GiBigDiamondRing } from "react-icons/gi"
 import { PiHeadsetDuotone, PiDress } from "react-icons/pi"
 import { IoShirtOutline } from "react-icons/io5"
 import { GrInstall } from "react-icons/gr"
 import { BiFilterAlt } from "react-icons/bi"
 import { BsSortNumericUpAlt, BsSortNumericUp } from "react-icons/bs"
-const FilterItems = ({ filter }) => {
+const FilterItems = ({ filter, lToH, hToL }) => {
   return (
     <div className="background commonfilterer ">
       <div className="filterTitlers">
@@ -36,10 +36,10 @@ const FilterItems = ({ filter }) => {
       </ul>
       <h3 className="filterName">Filter Price</h3> <hr className="filterLine" />
       <ul>
-        <li>
+        <li onClick={lToH}>
           <BsSortNumericUp size={20} /> Low to high
         </li>
-        <li>
+        <li onClick={hToL}>
           <BsSortNumericUpAlt size={20} />
           High to low
         </li>

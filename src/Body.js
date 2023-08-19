@@ -29,13 +29,26 @@ const Body = () => {
       return filtered
     })
     setData(filteredItem)
-    console.log(filteredItem)
   }
+
+  const lowTohigh = () => {
+    const sortedList = [...data].sort((a, b) => a.price - b.price)
+    setData(sortedList)
+  }
+  const hightoLow = () => {
+    const sortedList = [...data].sort((a, b) => b.price - a.price)
+    setData(sortedList)
+  }
+
   if (isOnline === false) return <Internet />
   if (loading) return <div>Loading...</div>
   return (
     <div className="bodyLayout">
-      <Leftsidebar filter={userFilteredItem} />
+      <Leftsidebar
+        filter={userFilteredItem}
+        lToH={lowTohigh}
+        hToL={hightoLow}
+      />
       <CardContainer list={data} />
     </div>
   )

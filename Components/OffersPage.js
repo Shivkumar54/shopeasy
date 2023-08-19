@@ -1,7 +1,32 @@
 import React from "react"
 import { TbDiscount2 } from "react-icons/tb"
+// import { FaGooglePay } from "react-icons/fa"
+import { LiaCreditCard } from "react-icons/lia"
+import { CiCreditCard1 } from "react-icons/ci"
+import { SiPhonepe, SiApplepay } from "react-icons/si"
 
 const OffersPage = () => {
+  const list = [
+    {
+      title: "Visa Credit Card",
+      desc: "Get 15% off on selected IIDC visa credit cards.",
+      offerIcon: <CiCreditCard1 size={30} />,
+      valid: "09/23",
+    },
+    {
+      title: "Apple Pay ",
+      desc: "Get flat 10% off when you pay with GooglePay.",
+      offerIcon: <SiApplepay size={30} />,
+      valid: "11/23",
+    },
+    {
+      title: "PhonePe ",
+      desc: "Get flat 8% off when you pay with PhonePe.",
+      offerIcon: <SiPhonepe size={30} />,
+      valid: "02/24",
+    },
+  ]
+
   return (
     <div className="background commonfilterer ">
       <div className="filterTitlers">
@@ -11,23 +36,18 @@ const OffersPage = () => {
         </span>
       </div>
       <div className="offersContents">
-        <span className="offertitle"> Visa Credit Card</span>
-        <p className="offerdesc">
-          Get 15% off on selected IIDC visa credit cards{" "}
-        </p>
-        <span>VALID - 09/23</span>
-        <hr />
-        <span className="offertitle"> Visa Credit Card</span>
-        <p className="offerdesc">
-          Get 15% off on selected IIDC visa credit cards{" "}
-        </p>
-        <span>VALID - 09/23</span>
-        <hr />
-        <span className="offertitle"> Visa Credit Card</span>
-        <p className="offerdesc">
-          Get 15% off on selected IIDC visa credit cards{" "}
-        </p>
-        <span>VALID - 09/23</span>
+        {list.map((item) => {
+          return (
+            <div className="offercontent">
+              <div className="offersTitler">
+                <span>{item.offerIcon}</span>
+                <span className="offertitle">{item.title}</span>
+              </div>
+              <p className="offerdesc">{item.desc}</p>
+              <span className="valid"> Valid until - {item.valid}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
