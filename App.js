@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
 import Header from "./src/Header"
@@ -8,13 +8,17 @@ import Cart from "./src/Cart"
 import Login from "./src/Login"
 import Error from "./src/Error"
 import Carddetails from "./Components/Carddetails"
-
+import { ProductsHolder, useProductContext } from "./Utils/ProductContext"
 const App = () => {
+  const productList = useProductContext()
+  console.log(productList)
   return (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
+    <ProductsHolder>
+      <div>
+        {/* <Header /> */}
+        <Outlet />
+      </div>
+    </ProductsHolder>
   )
 }
 export default App
@@ -30,15 +34,15 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: [<Header />, <Cart />],
       },
       {
         path: "/login",
-        element: <Login />,
+        element: [<Header />, <Login />],
       },
       {
         path: "/product/:id",
-        element: <Carddetails />,
+        element: [<Header />, <Carddetails />],
       },
     ],
     errorElement: <Error />,

@@ -5,7 +5,6 @@ import HomeShimmer from "../Shimmers/HomeShimmer"
 
 const CardContainer = ({ list }) => {
   const Bestseller = withBestSellerLabel(Card)
-
   return (
     <div className="commoncontainer cardContainer background">
       {list.length === 0 ? (
@@ -18,10 +17,14 @@ const CardContainer = ({ list }) => {
               key={item.id}
               to={"/product/" + item.id}
             >
-              {item.rating.rate >= 4 ? (
-                <Bestseller product={item} />
+              {item ? (
+                item.rating.rate >= 4 ? (
+                  <Bestseller product={item} />
+                ) : (
+                  <Card product={item} />
+                )
               ) : (
-                <Card product={item} />
+                <div className="shimmer-effect">Loading...</div>
               )}
             </Link>
           )

@@ -5,7 +5,7 @@ const Card = ({ product }) => {
     <div className="cardd">
       <div className="card">
         <div className="imager">
-          <img src={product.image} alt="tshirt" className="cardImage" />
+          <img src={product.image} alt={product.title} className="cardImage" />
           <div className="category">{product.category}</div>
         </div>
         <h5 className="cardTitle">{product.title}</h5>

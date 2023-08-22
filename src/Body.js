@@ -4,6 +4,7 @@ import CardContainer from "./CardContainer"
 import useOnlineStatus from "../Utils/usOnlineStatus"
 import useProductList from "../Utils/useProductList"
 import Internet from "../Components/Internet"
+import Header from "./Header"
 
 const Body = () => {
   const isOnline = useOnlineStatus()
@@ -11,6 +12,8 @@ const Body = () => {
 
   const [data, setData] = useState(productList)
   const [loading, setLoading] = useState(true)
+  const [searchedTxt, setSearchedTxt] = useState("")
+  const [inputVal, setInputVal] = useState("")
 
   useEffect(() => {
     if (productList.length > 0) {
@@ -42,18 +45,41 @@ const Body = () => {
 
   if (isOnline === false) return <Internet />
   if (loading) return <div>Loading...</div>
+
+  const filteredDatas = (searchedTxt, data) => {
+    const filteredData = data.filter((item) =>
+      item?.title?.toString().toLowerCase().includes(searchedTxt.toLowerCase())
+    )
+    setData(filteredData)
+  }
+
+  const onSearchChange = (e) => {
+    setSearchedTxt(e.target.value)
+    setInputVal(e.target.value)
+  }
+
   return (
-    <div className="bodyLayout">
-      <Leftsidebar
-        filter={userFilteredItem}
-        lToH={lowTohigh}
-        hToL={hightoLow}
+    <div className="rootLayout">
+      <Header
+        inputVal={inputVal}
+        filterItems={filteredDatas}
+        searchChange={onSearchChange}
+        data={data} // Pass the data array as a prop
       />
-      <CardContainer list={data} />
+      <div className="bodyLayout">
+        <Leftsidebar
+          filter={userFilteredItem}
+          lToH={lowTohigh}
+          hToL={hightoLow}
+        />
+        {inputVal.length > 3 && !data ? (
+          <p>No data Found</p>
+        ) : (
+          <CardContainer list={data} filteredDatas={filteredDatas} />
+        )}
+      </div>
     </div>
   )
 }
 
 export default Body
-
-// useprod -> fetch -> null -> data

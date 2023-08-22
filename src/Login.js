@@ -16,7 +16,7 @@ const Login = () => {
 
   // form validations
   const nameRegex = /^[A-Za-z ]{4,}$/
-  const emailRegex = /^[A-Za-z0-9.%_+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/
+  const emailRegex = /^[A-Za-z0-9.%_+-]+@[A-Za-z0-9.-]+\.[com]{2,}$/
   const passRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$/
 
   const validateName = nameRegex.test(name)

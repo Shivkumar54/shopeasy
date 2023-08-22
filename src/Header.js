@@ -1,16 +1,39 @@
-import React, { useState } from "react"
-import { BsShop } from "react-icons/bs"
+import React from "react"
+import { useLocation } from "react-router-dom"
+import Logo from "../Images/logoo.png"
 import { BiSearch } from "react-icons/bi"
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../Utils/usOnlineStatus"
-const Header = () => {
+const Header = ({ inputVal, filterItems, searchChange, data }) => {
   const isOnline = useOnlineStatus()
-  const [usrInput, setUsrInput] = useState("")
+  const location = useLocation()
+  const handleFilterClick = () => {
+    filterItems(inputVal, data)
+  }
 
-  const userEnteredValue = (e) => {
-    const userVal = e.target.value
-    setUsrInput(userVal)
+  const inputComponent = () => {
+    if (location.pathname === "/") {
+      return (
+        <div className="navSearch">
+          <BiSearch
+            size={25}
+            onClick={handleFilterClick}
+            className="searchIcon"
+          />
+          <input
+            className="search"
+            type="text"
+            placeholder="Search Products ...."
+            value={inputVal}
+            onChange={searchChange}
+          />
+        </div>
+      )
+    }
+    if (location.pathname.startsWith("/product")) {
+      return <div className="navSearchdisplayNone"></div>
+    }
   }
 
   return (
@@ -18,20 +41,11 @@ const Header = () => {
       <div className="logo">
         <h4>
           <Link className="shoppie" to="/">
-            <BsShop size={30} /> ShopEasy
+            <img src={Logo} alt="shopeasy" width={200} />
           </Link>
         </h4>
       </div>
-      <div className="navSearch">
-        <BiSearch size={25} className="searchIcon" />
-        <input
-          className="search"
-          type="text"
-          placeholder="Search Products ...."
-          value={usrInput}
-          onChange={userEnteredValue}
-        />
-      </div>
+      {inputComponent()}
       <div className="navlists">
         <span>{isOnline ? "🟢" : "🔴"}</span>
         <span>

@@ -513,3 +513,11 @@ hr {
   font-size: 0.9rem;
   text-transform: uppercase;
 }
+
+.onliner {
+  font-size: 0.85rem;
+}
+
+.navSearchdisplayNone {
+  display: none;
+}
