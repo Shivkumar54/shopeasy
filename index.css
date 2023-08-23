@@ -590,3 +590,7 @@ hr {
   border-radius: 0.4rem;
   padding: 0.5rem 1rem;
 }
+.clearcartbtn:hover {
+  background-color: #ec0000;
+  color: rgb(255, 255, 255);
+}
