@@ -274,15 +274,19 @@ li {
   margin-top: 1rem;
   display: inline-flex;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   gap: 0.5rem;
   padding: 0.7rem 1.4rem;
-  background-color: rgb(202, 202, 255);
+  background-color: rgb(230, 230, 230);
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 0.3rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.addedtocart {
+  background-color: rgb(255, 222, 161);
 }
 
 .errorpageLayout {
@@ -409,18 +413,25 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
-.cartSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.cartSectionLayout {
   width: 35rem;
   height: 85vh;
   margin-top: 1rem;
   background-color: white;
   border-radius: 0.5rem;
-  padding: 1.5rem 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.cartSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .cartTitle {
   font-weight: 500;
@@ -520,4 +531,62 @@ hr {
 
 .navSearchdisplayNone {
   display: none;
+}
+
+.cartdisplayer {
+  display: block;
+  padding: 1rem;
+}
+.cartHeading {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.cartLists {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  margin: 1.2rem 0;
+}
+.cartImg {
+  width: 70px;
+  height: 70px;
+}
+.cartImgaes {
+  width: 100%;
+  height: 100%;
+}
+.cartdetailstxt {
+  width: 100%;
+}
+
+.cartheaders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.clearcartbtn {
+  padding: 0.4rem 0.8rem;
+}
+.cartItemTitle {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.cartItemPrice {
+  font-weight: 700;
+}
+.clearcartbtn {
+  background-color: #ffaaaa;
+  color: rgb(58, 58, 58);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
 }

@@ -1,12 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import { BsCart2 } from "react-icons/bs"
+import { MdOutlineCelebration } from "react-icons/md"
 import Leftsidebar from "../src/Leftsidebar"
 import CardDetailsShimmer from "../Shimmers/CardDetailsShimmer"
 import useCarddetails from "../Utils/useCarddetails"
+import { useDispatch } from "react-redux"
+import { addItem } from "../Redux-Store/cartSlice"
 const Carddetails = () => {
+  const [isClicked, setIsClicked] = useState(false)
+
   const { id } = useParams()
   const details = useCarddetails(id)
+
+  const dispacher = useDispatch()
+  const addItemTocart = (details) => {
+    dispacher(addItem(details))
+    setIsClicked(true)
+  }
 
   return (
     <div className="bodyLayout">
@@ -38,10 +49,19 @@ const Carddetails = () => {
                 Price - <strong>₹{(details?.price * 10).toFixed(2)}</strong>
               </span>
               <br />
-              <button className="addtocart">
-                {" "}
-                <BsCart2 size={20} /> Add to Cart
-              </button>
+              {!isClicked ? (
+                <button
+                  className="addtocart"
+                  onClick={() => addItemTocart(details)}
+                >
+                  {" "}
+                  <BsCart2 size={20} /> Add to Cart
+                </button>
+              ) : (
+                <button className="addtocart addedtocart">
+                  <MdOutlineCelebration size={20} /> Added To Cart
+                </button>
+              )}
             </div>
           </div>
         )}

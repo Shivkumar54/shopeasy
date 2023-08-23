@@ -7,7 +7,7 @@ const ProductContext = createContext()
 // For Accesing Data all over the application
 export const useProductContext = () => useContext(ProductContext)
 
-// creating and setting the value
+// creating and setting the value globally or central store
 export const ProductsHolder = ({ children }) => {
   const productList = useProductList()
   const [product, setProduct] = useState(productList)

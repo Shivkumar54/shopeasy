@@ -5,7 +5,9 @@ import { BiSearch } from "react-icons/bi"
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../Utils/usOnlineStatus"
+import { useSelector } from "react-redux"
 const Header = ({ inputVal, filterItems, searchChange, data }) => {
+  const cartItems = useSelector((store) => store.cart.items)
   const isOnline = useOnlineStatus()
   const location = useLocation()
   const handleFilterClick = () => {
@@ -50,7 +52,8 @@ const Header = ({ inputVal, filterItems, searchChange, data }) => {
         <span>{isOnline ? "🟢" : "🔴"}</span>
         <span>
           <Link className="navSpan" to="/cart">
-            <AiOutlineShoppingCart size={20} /> Cart
+            <AiOutlineShoppingCart size={20} /> Cart - ({cartItems.length}{" "}
+            items)
           </Link>
         </span>
         <span>

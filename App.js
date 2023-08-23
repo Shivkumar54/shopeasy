@@ -9,16 +9,20 @@ import Login from "./src/Login"
 import Error from "./src/Error"
 import Carddetails from "./Components/Carddetails"
 import { ProductsHolder, useProductContext } from "./Utils/ProductContext"
+import { Provider } from "react-redux"
+import appStore from "./Redux-Store/appStore"
 const App = () => {
-  const productList = useProductContext()
-  console.log(productList)
+  // const productList = useProductContext()
+
   return (
-    <ProductsHolder>
-      <div>
-        {/* <Header /> */}
-        <Outlet />
-      </div>
-    </ProductsHolder>
+    <Provider store={appStore}>
+      <ProductsHolder>
+        <div>
+          {/* <Header /> */}
+          <Outlet />
+        </div>
+      </ProductsHolder>
+    </Provider>
   )
 }
 export default App

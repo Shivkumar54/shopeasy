@@ -38,7 +38,7 @@ const OffersPage = () => {
       <div className="offersContents">
         {list.map((item, i) => {
           return (
-            <div className="offercontent" key={i + 1}>
+            <div className="offercontent" key={i}>
               <div className="offersTitler">
                 <span>{item.offerIcon}</span>
                 <span className="offertitle">{item.title}</span>
