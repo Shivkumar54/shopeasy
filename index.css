@@ -407,24 +407,6 @@ hr {
   margin: 0 0.5rem;
 }
 
-.cartLayout {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-y: scroll;
-}
-
-.cartSectionLayout {
-  width: 35rem;
-  height: 85vh;
-  margin-top: 1rem;
-  background-color: white;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-}
-
 .cartSection {
   width: 100%;
   height: 100%;
@@ -565,7 +547,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .clearcartbtn {
@@ -580,20 +562,20 @@ hr {
   margin-right: 2.5rem;
 }
 .clearcartbtn {
-  background-color: #ffaaaa;
+  background-color: #ffe4ad;
   color: rgb(58, 58, 58);
   font-weight: 600;
   font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
   border: none;
   border-radius: 0.4rem;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   transition: 0.2s ease-in-out;
 }
 .clearcartbtn:hover {
-  background-color: #ec0000;
+  background-color: #030303;
   color: rgb(255, 255, 255);
 }
 
@@ -623,4 +605,103 @@ hr {
 
 button {
   cursor: pointer;
+}
+
+.CartLayoutandPayment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  gap: 1rem;
+}
+
+.cartSectionLayout {
+  margin-top: 1rem;
+  width: 35rem;
+  height: 85vh;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.paymentLayout {
+  width: 350px;
+  background-color: white;
+  height: 40vh;
+  margin-top: 0.5rem;
+  padding: 1.8rem 1.5rem;
+}
+.addressLayout {
+  width: 350px;
+  background-color: white;
+  height: 22vh;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+}
+.checkoutLayout {
+  width: 350px;
+  background-color: white;
+  height: 20vh;
+  margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+.paymentHeading {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.productCalcSpan {
+  padding: 0.3rem 0;
+  font-size: 1.01rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.costSpanner {
+  font-weight: 400;
+}
+
+.grandtotalline {
+  margin: 0.5rem 0;
+}
+.shippingaddress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.grandTotal {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.addressLine {
+  margin: 0.4rem 0 0.6rem 0;
+}
+.addressdata {
+  font-size: 0.9rem;
+}
+
+.paynowtitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.paynowtxt {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.paynowbtn {
+  width: 100%;
+  height: 5vh;
+  padding: 0.2rem 1.4rem;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
