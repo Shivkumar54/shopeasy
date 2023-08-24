@@ -1,15 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { clearCart } from "../Redux-Store/cartSlice"
+import { clearCart, removeItem, updataQuantity } from "../Redux-Store/cartSlice"
 import { LuTrash2 } from "react-icons/lu"
+import { FaMinus, FaPlus } from "react-icons/fa"
 
 const Cart = () => {
+  const [count, setCount] = useState()
   const cartItems = useSelector((store) => store.cart.items)
-
   const dispatch = useDispatch()
-
   const clearCartItems = () => {
     dispatch(clearCart())
+  }
+
+  const deleteItems = (itemToDelete) => {
+    dispatch(removeItem({ id: itemToDelete.id }))
+  }
+
+  const updaateItems = (item, newQuantity) => {
+    dispatch(updataQuantity({ id: item.id, newQuantity }))
   }
 
   return (
@@ -33,23 +41,50 @@ const Cart = () => {
               </button>
             </div>
             <hr />
-            {cartItems.map((items) => {
+            {cartItems.map((item) => {
+              // Use 'item' instead of 'items'
               return (
-                <div className="cartLists">
+                <div className="cartLists" key={item.id}>
                   <div className="cartImg">
                     <img
-                      src={items.image}
-                      alt={items.title}
+                      src={item.image}
+                      alt={item.title}
                       className="cartImgaes"
                     />
                   </div>
                   <div className="cartdetailstxt">
-                    <span className="cartItemTitle">{items.title}</span>
+                    <span className="cartItemTitle">{item.title}</span>
                     <br />
                     <span className="cartItemPrice">
-                      ₹ {(items.price * 10).toFixed(2)}
+                      ₹ {(item.price * 10).toFixed(2)}
                     </span>
+
+                    {item.quantity && (
+                      <>
+                        <button
+                          className="cartButton"
+                          onClick={() => {
+                            updaateItems(item, item.quantity - 1)
+                          }}
+                          disabled={item.quantity <= 1}
+                        >
+                          -
+                        </button>
+                        <span className="cartQuantity">{item.quantity}</span>
+                        <button
+                          className="cartButton"
+                          onClick={() => {
+                            updaateItems(item, item.quantity + 1)
+                          }}
+                        >
+                          +
+                        </button>
+                      </>
+                    )}
                   </div>
+                  <span className="deleter" onClick={() => deleteItems(item)}>
+                    <LuTrash2 size={25} />
+                  </span>
                 </div>
               )
             })}

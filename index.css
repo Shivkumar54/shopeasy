@@ -545,7 +545,7 @@ hr {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 1.2rem 0;
 }
 .cartImg {
@@ -577,6 +577,7 @@ hr {
 }
 .cartItemPrice {
   font-weight: 700;
+  margin-right: 2.5rem;
 }
 .clearcartbtn {
   background-color: #ffaaaa;
@@ -589,8 +590,37 @@ hr {
   border: none;
   border-radius: 0.4rem;
   padding: 0.5rem 1rem;
+  transition: 0.2s ease-in-out;
 }
 .clearcartbtn:hover {
   background-color: #ec0000;
   color: rgb(255, 255, 255);
+}
+
+.cartButton {
+  margin: 0.2rem 0.5rem;
+  width: 40px;
+  height: auto;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.1rem;
+  color: black;
+  background-color: rgb(233, 233, 233);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  cursor: pointer;
+}
+.cartQuantity {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.deleter {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }

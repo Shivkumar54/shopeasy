@@ -18,7 +18,6 @@ const Carddetails = () => {
     dispacher(addItem(details))
     setIsClicked(true)
   }
-
   return (
     <div className="bodyLayout">
       <Leftsidebar />
