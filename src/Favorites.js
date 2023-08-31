@@ -3,6 +3,7 @@ import { LuTrash2 } from "react-icons/lu"
 import { useDispatch, useSelector } from "react-redux"
 import CartItems from "../Components/CartItems"
 import { clearFavItem, removeFavItem } from "../Redux-Store/WhishlistSlice"
+import { Link } from "react-router-dom"
 const Favorites = () => {
   const dispatch = useDispatch()
   const favLists = useSelector((store) => store.favorite.favItem)
@@ -26,15 +27,16 @@ const Favorites = () => {
         {favLists.length === 0 && (
           <div className="cartSection">
             <img
-              src="https://cdni.iconscout.com/illustration/premium/thumb/add-to-shopping-favorite-list-4001619-3307798.png"
+              src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-3613108-3020773.png"
               alt="Empty cart"
               className="emptycart"
               width={350}
               height={350}
             />
-            <span className="noitemTxt">
-              looks like You have no favorite Items
-            </span>
+            <span className="noitemTxt">no favorite Items</span>
+            <Link to="/">
+              <span>Go to home</span>
+            </Link>
           </div>
         )}
 

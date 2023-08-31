@@ -34,7 +34,7 @@ const Cart = () => {
           {cartItems.length === 0 ? (
             <div className="cartSection">
               <img
-                src="https://cdni.iconscout.com/illustration/premium/thumb/before-login-no-product-in-cart-4006356-3309942.png"
+                src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-4150967-3437888.png"
                 alt="Empty cart"
                 className="emptycart"
               />

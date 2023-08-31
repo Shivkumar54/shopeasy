@@ -9,7 +9,10 @@ const CartItems = ({ item, updaateItems, deleteItems }) => {
       <div className="cartdetailstxt">
         <span className="cartItemTitle">{item.title}</span>
         <br />
-        <span className="cartItemPrice">₹ {(item.price * 10).toFixed(2)}</span>
+        <span className="cartItemPrice">
+          ₹ {(item.price * 10).toFixed(2)}{" "}
+          <span className="peritem">per item</span>
+        </span>
 
         {item.quantity && (
           <>
