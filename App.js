@@ -11,6 +11,7 @@ import Carddetails from "./Components/Carddetails"
 import { ProductsHolder, useProductContext } from "./Utils/ProductContext"
 import { Provider } from "react-redux"
 import appStore from "./Redux-Store/appStore"
+import Favorites from "./src/Favorites"
 const App = () => {
   // const productList = useProductContext()
 
@@ -35,6 +36,10 @@ const AppRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
+      },
+      {
+        path: "/favorite",
+        element: [<Header />, <Favorites />],
       },
       {
         path: "/cart",

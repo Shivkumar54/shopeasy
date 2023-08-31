@@ -5,6 +5,7 @@ import useOnlineStatus from "../Utils/usOnlineStatus"
 import useProductList from "../Utils/useProductList"
 import Internet from "../Components/Internet"
 import Header from "./Header"
+import HomeShimmer from "../Shimmers/HomeShimmer"
 
 const Body = () => {
   const isOnline = useOnlineStatus()
@@ -44,7 +45,7 @@ const Body = () => {
   }
 
   if (isOnline === false) return <Internet />
-  if (loading) return <div>Loading...</div>
+  if (loading) return <HomeShimmer />
 
   const filteredDatas = (searchedTxt, data) => {
     const filteredData = data.filter((item) =>

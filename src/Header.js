@@ -2,12 +2,15 @@ import React from "react"
 import { useLocation } from "react-router-dom"
 import Logo from "../Images/logoo.png"
 import { BiSearch } from "react-icons/bi"
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
+import { FaLuggageCart } from "react-icons/fa"
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../Utils/usOnlineStatus"
 import { useSelector } from "react-redux"
 const Header = ({ inputVal, filterItems, searchChange, data }) => {
   const cartItems = useSelector((store) => store.cart.items)
+  const favItem = useSelector((store) => store.favorite.favItem)
   const isOnline = useOnlineStatus()
   const location = useLocation()
   const handleFilterClick = () => {
@@ -51,9 +54,23 @@ const Header = ({ inputVal, filterItems, searchChange, data }) => {
       <div className="navlists">
         <span>{isOnline ? "🟢" : "🔴"}</span>
         <span>
+          <Link className="navSpan" to="/favorite">
+            {favItem.length === 0 ? (
+              <AiOutlineHeart size={20} />
+            ) : (
+              <AiFillHeart size={20} />
+            )}{" "}
+            Favorites - {favItem.length}
+          </Link>
+        </span>
+        <span>
           <Link className="navSpan" to="/cart">
-            <AiOutlineShoppingCart size={20} /> Cart - ({cartItems.length}{" "}
-            items)
+            {cartItems.length === 0 ? (
+              <AiOutlineShoppingCart size={20} />
+            ) : (
+              <FaLuggageCart size={20} />
+            )}
+            Cart - {cartItems.length}
           </Link>
         </span>
         <span>

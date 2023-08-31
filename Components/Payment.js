@@ -2,7 +2,9 @@ import React from "react"
 import { LiaShippingFastSolid } from "react-icons/lia"
 import { useDispatch, useSelector } from "react-redux"
 import { clearCart } from "../Redux-Store/cartSlice"
+import { useNavigate } from "react-router-dom"
 const Payment = ({ totalprice }) => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const cartList = useSelector((store) => store.cart.items)
   const taxes = (totalprice * 15) / 100
@@ -23,6 +25,9 @@ const Payment = ({ totalprice }) => {
     dispatch(clearCart())
   }
 
+  const navigateToHome = () => {
+    navigate("/")
+  }
   return (
     <div className="paymentAddressLayout">
       <div className="addressLayout">
@@ -72,7 +77,9 @@ const Payment = ({ totalprice }) => {
             Paynow
           </button>
         ) : (
-          <button className="paynowbtn">Shop Items</button>
+          <button className="paynowbtn" onClick={navigateToHome}>
+            Continue Shopping
+          </button>
         )}
       </div>
     </div>

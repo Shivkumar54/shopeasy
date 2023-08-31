@@ -8,9 +8,13 @@ const useProductList = () => {
   }, [])
 
   const ProductList = async () => {
-    const res = await fetch("https://fakestoreapi.com/products")
-    const data = await res.json()
-    setList(data)
+    try {
+      const res = await fetch("https://fakestoreapi.com/products")
+      const data = await res.json()
+      setList(data)
+    } catch (error) {
+      console.log("Unable To fetch please try after some time" + error)
+    }
   }
 
   return list

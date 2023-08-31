@@ -6,7 +6,7 @@ import HomeShimmer from "../Shimmers/HomeShimmer"
 const CardContainer = ({ list }) => {
   const Bestseller = withBestSellerLabel(Card)
   return (
-    <div className="commoncontainer cardContainer background">
+    <div className="commoncontainer homeContainer cardContainer background">
       {list.length === 0 ? (
         <HomeShimmer />
       ) : (

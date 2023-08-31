@@ -97,3 +97,31 @@
   border: none;
   outline: none;
 }
+.shimmmerheading {
+  padding: 1rem 2rem;
+  background-color: white;
+  height: 10vh;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchShimmer {
+  width: 550px;
+  height: 3rem;
+  background-color: #dfdfdf;
+}
+.shimmerLogo {
+  height: 3.5rem;
+}
+.listsShimmer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.shimmerheadingSpan {
+  width: 100px;
+  height: 1.5rem;
+  background-color: #dfdfdf;
+}

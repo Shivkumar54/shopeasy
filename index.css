@@ -140,16 +140,22 @@ li {
   cursor: pointer;
 }
 /* cardContainer */
-
+.back {
+  display: inline-flex;
+}
 .cardContainer {
   margin-right: 1.35rem;
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 0rem;
   flex-wrap: wrap;
   overflow-y: scroll;
+}
+
+.homeContainer {
+  justify-content: space-between;
 }
 
 .card {
@@ -230,14 +236,18 @@ li {
   flex-wrap: unset;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem;
+  padding: 1rem 2.5rem;
 }
-
+.favoriteeSymbol {
+  position: absolute;
+  margin-left: 1.5rem;
+}
 .dImg {
   width: 45%;
   padding: 0.5rem;
 }
 .dImage {
+  position: relative;
   width: 100%;
 }
 .dText {
@@ -249,6 +259,7 @@ li {
   font-weight: 600;
   font-size: 0.8rem;
   margin-bottom: 5rem;
+  margin-right: 1.5rem;
   color: rgb(68, 68, 68);
   background-color: #f6f6f6;
   padding: 0.5rem 1rem;
@@ -273,20 +284,22 @@ li {
 .addtocart {
   margin-top: 1rem;
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   font-size: 1rem;
   font-weight: 600;
   gap: 0.5rem;
   padding: 0.7rem 1.4rem;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(238, 238, 238);
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 0.3rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-right: 1.5rem;
+  width: 200px;
 }
 
-.addedtocart {
-  background-color: rgb(255, 222, 161);
+.addtofav {
+  background-color: rgb(255, 237, 205);
 }
 
 .errorpageLayout {
