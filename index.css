@@ -155,7 +155,7 @@ li {
 }
 
 .homeContainer {
-  justify-content: space-between;
+  gap: 2.5rem;
 }
 
 .card {
